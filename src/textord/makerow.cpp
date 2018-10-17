@@ -1807,13 +1807,13 @@ void separate_underlines(TO_BLOCK* block,  // block to do
         ASSERT_HOST(blob->cblob() != nullptr);
         rotated_blob = crotate_cblob (blob->cblob(),
           blob_rotation);
-        if (test_underline(
+        if (/*test_underline(
             testing_on && textord_show_final_rows,
             rotated_blob, static_cast<int16_t>(row->intercept()),
             static_cast<int16_t>(
                 block->line_size *
                 (tesseract::CCStruct::kXHeightFraction +
-                 tesseract::CCStruct::kAscenderFraction / 2.0f)))) {
+                 tesseract::CCStruct::kAscenderFraction / 2.0f)))*/ TRUE) {
           under_it.add_after_then_move(blob_it.extract());
           if (testing_on && textord_show_final_rows) {
             tprintf("Underlined blob at:");
